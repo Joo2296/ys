@@ -7,6 +7,8 @@
     <title>장바구니</title>
 
     <link rel="stylesheet" href="cart_style.css">
+
+    <script src="js_min.js"></script>
 </head>
 
 <body>
@@ -30,12 +32,73 @@
                         <p>장바구니가 비어 있습니다.</p>
                     </div>
                     <div id="using">
-
-                    </div>
-                    <div id="cart_btns">
-                        <input type="button" value="전체상품주문">
-                        <input type="button" value="선택상품주문">
-                        <input type="button" value="쇼핑계속하기">
+                        <h2>일반상품</h2>
+                        <div class="table table01">
+                            <span>
+                                <input type="checkbox" name="" id="">
+                            </span>
+                            <span>이미지</span>
+                            <span>상품정보</span>
+                            <span>수량</span>
+                            <span>상품구매금액</span>
+                            <span>할인금액</span>
+                            <span>적립금</span>
+                            <span>배송구분</span>
+                            <span>배송비</span>
+                            <span>선택</span>
+                        </div>
+                        <div class="table table02">
+                            <span>
+                                <input type="checkbox" name="" id="">
+                            </span>
+                            <span><img src="" alt=""></span>
+                            <span>딸기 요거트 1kg</span>
+                            <span>
+                                <input type="number" name="" id="">
+                                <input type="button" name="" id="" value="변경">
+                            </span>
+                            <span>10,000원</span>
+                            <span>-</span>
+                            <span>-</span>
+                            <span>기본배송</span>
+                            <span>2,500원<span>조건</span></span>
+                            <span>
+                                <input type="button" value="주문하기">
+                                <input type="button" value="관심상품등록">
+                                <input type="button" value="x 삭제">
+                            </span>
+                        </div>
+                        <div class="table table03">
+                            <span>[기본배송]</span>
+                            <span>상품구매금액</span>
+                            <span>000</span>
+                            <span>+</span>
+                            <span>배송비</span>
+                            <span>000</span>
+                            <span>=</span>
+                            <span>합계 :</span>
+                            <span>000</span>
+                            <span>원</span>
+                        </div>
+                        <div class="table table04">
+                            <img src="" alt="">
+                            <span>할인 적용 금액은 주문서작성의 결제예정금액에서 확인 가능합니다.</span>
+                        </div>
+                        <div class="table table05">
+                            <span>선택상품을</span>
+                            <span>
+                                <input type="button" value="x 삭제하기">
+                            </span>
+                            <span>
+                                <input type="button" value="해외배송상품 장바구니로 이동">
+                            </span>
+                            <span>
+                                <input type="button" value="장바구니비우기">
+                            </span>
+                            <span>
+                                <input type="button" value="견적서출력">
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div id="payment">
@@ -68,6 +131,19 @@
         <!--푸터-->
         <div id="footer"></div>
     </div>
+
+    <script>
+        $(function(){
+            $("#delivery1").on("change",function(){
+                $("#empty").css("display","none");
+                $("#using").css("display","block")
+            })
+            $("#delivery2").on("change",function(){
+                $("#empty").css("display","block");
+                $("#using").css("display","none")
+            })
+        })
+    </script>
 </body>
 
 </html>
